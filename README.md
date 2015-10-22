@@ -1,6 +1,6 @@
 Lennard Jones Monte Carlo simulation in the Gibbs ensemble.
+Needs a read.in file with parameters as:
 
-read.in:
-		T
-		N1 N2
-		L1 L2	
+	T
+	N1 N2
+	L1 L2	
