@@ -18,7 +18,7 @@ using namespace std;
 double pow(double x, int n);
 double square_mod(const double *a);
 void get_inbounds(double *a);
-
+bool is_inbounds(double *a);
 class RRand{
  public:
   RRand(){}

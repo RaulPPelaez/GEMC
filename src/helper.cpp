@@ -19,3 +19,8 @@ double square_mod(const double *a){
 void get_inbounds(double *a){
   fori(0, 3) a[i]-=int( ( (a[i]<0)?-0.5:0.5 ) + a[i]);
 }
+
+bool is_inbounds(double *a){
+  fori(0, 3) if(int( ( (a[i]<0)?-0.5:0.5 ) + a[i])!=0) return false;
+  return true;
+}

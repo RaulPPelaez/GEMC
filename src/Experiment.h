@@ -1,11 +1,14 @@
 #ifndef EXPERIMENT_H
 #define EXPERIMENT_H
 
+
+
+
 #include"helper.h"
 #include<algorithm>
 #include<fstream>
 typedef unsigned int uint;
-
+using namespace std;
 class Experiment{
 public:
   Experiment(){}
@@ -15,7 +18,8 @@ public:
   void update();
 
   double enerNL(const double *ips) const;
-  double enerNL(uint index, uint &icell) const;
+  double enerNL(const double *ips, uint &icell, const int &index) const;
+  double enerNL(const int &index, uint &icell) const;
   double total_ener() const;
   
   void make_linked_list();
@@ -29,7 +33,7 @@ public:
 
   vector<double> ps;
   double L;
-
+  double ener;
 private:
   double LJ(const double *p1, const double *p2) const;
   void adjust_step();
@@ -37,8 +41,10 @@ private:
   
   RRand rng;
   double beta;
-  double rc, erc;
+  double rc, erc, rc2;
+  
 
+  
   double js; //jump step
   uint ntry, naccept;
 
